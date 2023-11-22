@@ -1,0 +1,9 @@
+<p>image-gallery works!</p>
+<div>
+  <ul>
+    <li *ngFor="let link of links; let i = index">
+      <img [src]="link" alt="Image {{ i + 1 }}" />
+      <button (click)="removeImage(i)">Remove</button>
+    </li>
+  </ul>
+</div>

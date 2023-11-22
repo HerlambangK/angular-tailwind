@@ -1,0 +1,38 @@
+<div class="mb-20 sm:mb-28 mt-5 max-w-3xl mx-auto">
+  <h1 class="text-3xl font-semibold text-center">Contact</h1>
+  <p class="mt-6 text-center">
+    Please contact me directly at
+    <a class="underline" href="mailto:example@gmail.com"> gmail </a>
+    or through this form.
+  </p>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" class="flex flex-col w-full">
+    <input
+      type="text"
+      class="h-10 px-4 rounded-lg border-blue-500 transition-all border p-2 m-2"
+      name="name"
+      required
+      formControlName="name"
+      placeholder="Name"
+    />
+
+    <input
+      type="text"
+      class="h-10 px-4 rounded-lg border-blue-500 transition-all border p-2 m-2"
+      name="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+    <textarea
+      name="message"
+      id="message"
+      cols="30"
+      formControlName="message"
+      class="h-52 my-4 block rounded-lg border-blue-500 transition-all border p-2 m-2"
+    ></textarea>
+    <button
+      class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-5000"
+    >
+      Send
+    </button>
+  </form>
+</div>
